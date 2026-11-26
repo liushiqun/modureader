@@ -163,6 +163,7 @@ dependency_overrides:
   icons_plus:
     path: third_party/icons_plus
   meta: ^1.16.0
+  fake_async: 1.3.1
   langchain:
     git:
       url: https://github.com/Anxcye/langchain_dart.git
