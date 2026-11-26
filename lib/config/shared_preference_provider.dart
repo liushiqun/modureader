@@ -1050,7 +1050,7 @@ class Prefs extends ChangeNotifier {
       String? online = prefs.getString('onlineTtsService');
       if (online != null) return _normalizeTtsService(online);
     }
-    return 'system';
+    return 'openrouter';
   }
 
   /// Maps a stored id onto a service this build can run.
