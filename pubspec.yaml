@@ -162,6 +162,7 @@ dependency_overrides:
     path: third_party/hf_tokenizers
   icons_plus:
     path: third_party/icons_plus
+  meta: ^1.16.0
   langchain:
     git:
       url: https://github.com/Anxcye/langchain_dart.git
