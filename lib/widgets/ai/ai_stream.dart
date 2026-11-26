@@ -1,7 +1,8 @@
+import 'package:modu_reader/service/ai/langchain_stubs.dart';
 import 'package:modu_reader/l10n/generated/L10n.dart';
 import 'package:modu_reader/models/ai_provider.dart';
 import 'package:modu_reader/service/ai/index.dart';
-import 'package:modu_reader/service/ai/langchain_runner.dart';
+// import_runner.dart';
 import 'package:modu_reader/service/ai/prompt_generate.dart';
 import 'package:modu_reader/utils/toast/common.dart';
 import 'package:modu_reader/widgets/markdown/styled_markdown.dart';

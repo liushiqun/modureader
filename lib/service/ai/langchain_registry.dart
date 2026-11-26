@@ -1,3 +1,4 @@
+import 'package:modu_reader/service/ai/langchain_stubs.dart';
 import 'dart:io';
 import 'package:modu_reader/service/ai/answer_presentation.dart';
 
@@ -9,13 +10,13 @@ import 'package:modu_reader/models/ai_provider.dart';
 import 'package:modu_reader/providers/current_reading.dart';
 import 'package:modu_reader/service/ai/tools/ai_tool_registry.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:langchain_anthropic/langchain_anthropic.dart';
-import 'package:langchain_core/chat_models.dart';
-import 'package:langchain_core/tools.dart';
-import 'package:langchain_google/langchain_google.dart';
-import 'package:langchain_openai/langchain_openai.dart';
+// import_anthropic.dart';
+// import_core/chat_models.dart';
+// import_core/tools.dart';
+// import_google.dart';
+// import_openai.dart';
 
-import 'langchain_ai_config.dart';
+// import_ai_config.dart';
 
 /// Factory responsible for building chat models based on user preferences.
 class LangchainAiRegistry {

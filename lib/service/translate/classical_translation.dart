@@ -1,13 +1,14 @@
+import 'package:modu_reader/service/ai/langchain_stubs.dart';
 import 'translation_api_client.dart';
 import 'dart:convert';
 
 import 'package:modu_reader/config/shared_preference_provider.dart';
 import 'package:modu_reader/service/ai/index.dart';
-import 'package:modu_reader/service/ai/langchain_runner.dart';
+// import_runner.dart';
 import 'package:modu_reader/service/translate/translation_answer.dart';
 import 'package:crypto/crypto.dart';
 import 'package:dio/dio.dart';
-import 'package:langchain_core/chat_models.dart';
+// import_core/chat_models.dart';
 
 enum ClassicalTranslationEngine { ai, baidu, microsoft }
 

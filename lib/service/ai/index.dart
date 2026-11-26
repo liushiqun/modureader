@@ -1,3 +1,4 @@
+import 'package:modu_reader/service/ai/langchain_stubs.dart';
 import 'dart:async';
 import 'dart:io';
 
@@ -13,8 +14,7 @@ import 'package:modu_reader/service/ai/langchain_runner.dart';
 import 'package:modu_reader/utils/ai_reasoning_parser.dart';
 import 'package:modu_reader/utils/log/common.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:langchain_core/chat_models.dart';
-import 'package:langchain_core/prompts.dart';
+import 'package:modu_reader/service/ai/langchain_stubs.dart';
 
 // Global request timestamps list for RPM throttling
 final List<DateTime> _aiRequestTimestamps = [];

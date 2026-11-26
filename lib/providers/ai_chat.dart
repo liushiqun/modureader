@@ -1,3 +1,4 @@
+import 'package:modu_reader/service/ai/langchain_stubs.dart';
 import 'package:modu_reader/service/private_library.dart';
 import 'package:modu_reader/models/book.dart';
 import 'dart:async';
@@ -17,7 +18,7 @@ import 'package:modu_reader/service/ai/dictionary_confirmation.dart';
 import 'package:modu_reader/service/ai/dictionary_web_search.dart';
 import 'package:modu_reader/service/ai/index.dart';
 import 'package:modu_reader/service/ai/coalesced_stream.dart';
-import 'package:modu_reader/service/ai/langchain_runner.dart';
+// import_runner.dart';
 import 'package:modu_reader/service/ai/reading_skill_execution.dart';
 import 'package:modu_reader/service/ai/reading_request_snapshot.dart';
 import 'package:modu_reader/service/ai/skill_message_label.dart';
@@ -29,7 +30,7 @@ import 'package:modu_reader/utils/ai_reasoning_parser.dart';
 import 'package:modu_reader/utils/log/common.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:langchain_core/chat_models.dart';
+// import_core/chat_models.dart';
 
 part 'ai_chat.g.dart';
 

@@ -1,9 +1,10 @@
+import 'package:modu_reader/service/ai/langchain_stubs.dart';
 import 'dart:async';
 import 'dart:convert';
 
 import 'package:modu_reader/utils/ai_reasoning_parser.dart';
 import 'package:modu_reader/utils/log/common.dart';
-import 'package:langchain/langchain.dart';
+// import.dart';
 
 class CancelableLangchainRunner {
   static const String thinkTag = '<think/>';
@@ -18,14 +19,14 @@ class CancelableLangchainRunner {
   }
 
   Stream<String> stream({
-    required BaseChatModel model,
-    required PromptValue prompt,
+    required // // BaseChatModel model,
+    required // PromptValue prompt,
   }) {
     String thinkBuffer = '';
     String answerBuffer = '';
     bool reasoningDetected = false;
     bool answerPhaseStarted = false;
-    StreamSubscription<ChatResult>? subscription;
+    StreamSubscription<// ChatResult>? subscription;
     Future<void>? cleanup;
 
     late StreamController<String> controller;
@@ -103,14 +104,14 @@ class CancelableLangchainRunner {
   }
 
   Stream<String> streamAgent({
-    required BaseChatModel model,
+    required // // BaseChatModel model,
     required List<Tool> tools,
     required List<ChatMessage> history,
     required String input,
     ChatMessage? systemMessage,
     int maxIterations = 120,
   }) {
-    StreamSubscription<ChatResult>? subscription;
+    StreamSubscription<// ChatResult>? subscription;
     Completer<void>? pendingIteration;
     var cancelled = false;
     Future<void>? cleanup;
@@ -213,10 +214,10 @@ class CancelableLangchainRunner {
             throw StateError('Agent prompt messages cannot be empty');
           }
 
-          final prompt = PromptValue.chat(promptMessages);
+          final prompt = // PromptValue.chat(promptMessages);
           final options = model.defaultOptions.copyWith(tools: toolSpecs);
 
-          ChatResult? aggregated;
+          // ChatResult? aggregated;
           final completer = Completer<void>();
           pendingIteration = completer;
           subscription = model.stream(prompt, options: options).listen(
@@ -361,7 +362,7 @@ class CancelableLangchainRunner {
     return controller.stream;
   }
 
-  ChatResult _normalizeThinkChunk(ChatResult chunk) {
+  // ChatResult _normalizeThinkChunk(// ChatResult chunk) {
     final content = _normalizeThinkText(chunk.output.content);
     final reasoningContent = _normalizeThinkText(chunk.output.reasoningContent);
     final output = AIChatMessage(
@@ -370,7 +371,7 @@ class CancelableLangchainRunner {
       toolCalls: chunk.output.toolCalls,
     );
 
-    return ChatResult(
+    return // ChatResult(
       output: output,
       usage: chunk.usage,
       id: chunk.id,
@@ -454,7 +455,7 @@ class CancelableLangchainRunner {
     );
   }
 
-  Future<void> _closeModel(BaseChatModel model) async {
+  Future<void> _closeModel(// // BaseChatModel model) async {
     try {
       model.close();
     } catch (_) {

@@ -1,9 +1,10 @@
+import 'package:modu_reader/service/ai/langchain_stubs.dart';
 import 'package:modu_reader/enums/ai_reasoning_effort.dart';
 import 'dart:convert';
 
-import 'package:langchain_anthropic/langchain_anthropic.dart';
-import 'package:langchain_google/langchain_google.dart';
-import 'package:langchain_openai/langchain_openai.dart';
+// import_anthropic.dart';
+// import_google.dart';
+// import_openai.dart';
 
 /// Normalized configuration for LangChain-backed chat providers.
 class LangchainAiConfig {
@@ -33,8 +34,8 @@ class LangchainAiConfig {
   final AiReasoningEffort reasoningEffort;
   final Map<String, dynamic>? additional;
 
-  ChatOpenAIOptions toOpenAIOptions() {
-    return ChatOpenAIOptions(
+  // // ChatOpenAIOptions toOpenAIOptions() {
+    return // // ChatOpenAIOptions(
       model: model.isEmpty ? null : model,
       temperature: normalizeAiTemperatureForModel(model, temperature),
       topP: topP,
@@ -252,15 +253,15 @@ LangchainAiConfig mergeConfigs(
 }
 
 extension on AiReasoningEffort {
-  ChatOpenAIReasoningEffort? toOpenAiReasoningEffort() {
+  // ChatOpenAIReasoningEffort? toOpenAiReasoningEffort() {
     return switch (this) {
       AiReasoningEffort.auto => null,
       // The pinned SDK has no 'none' enum. The HTTP adapter adds the
       // protocol-specific disable field after SDK serialization.
       AiReasoningEffort.none => null,
-      AiReasoningEffort.low => ChatOpenAIReasoningEffort.low,
-      AiReasoningEffort.medium => ChatOpenAIReasoningEffort.medium,
-      AiReasoningEffort.high => ChatOpenAIReasoningEffort.high,
+      AiReasoningEffort.low => // ChatOpenAIReasoningEffort.low,
+      AiReasoningEffort.medium => // ChatOpenAIReasoningEffort.medium,
+      AiReasoningEffort.high => // ChatOpenAIReasoningEffort.high,
     };
   }
 }

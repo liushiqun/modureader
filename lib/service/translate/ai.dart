@@ -1,3 +1,4 @@
+import 'package:modu_reader/service/ai/langchain_stubs.dart';
 import 'package:modu_reader/config/shared_preference_provider.dart';
 import 'package:modu_reader/l10n/generated/L10n.dart';
 import 'package:modu_reader/l10n/modu_strings.dart';
@@ -11,7 +12,7 @@ import 'package:modu_reader/widgets/ai/ai_chat_stream.dart';
 import 'package:modu_reader/providers/ai_chat.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
-import 'package:modu_reader/service/ai/langchain_runner.dart';
+// import_runner.dart';
 import 'package:modu_reader/service/translate/translation_answer.dart';
 
 class AiTranslateProvider extends TranslateServiceProvider {
