@@ -204,8 +204,6 @@ dev_dependencies:
   analyzer: 7.3.0
 flutter:
   uses-material-design: true
-  config:
-    enable-swift-package-manager: false
   generate: true
   assets:
     - assets/fonts/SourceHanSerifSC-Regular.otf
